@@ -1,0 +1,52 @@
+
+#image-gallery
+{
+  margin-top: 10%;
+  display: grid;
+  gap: 0px 0px;
+  grid-template-columns: auto auto auto;
+}
+
+#image-gallery div
+{
+  border: 1px solid red;
+}
+
+#image-1
+{
+    grid-column: 1 1;
+}
+
+#image-2
+{
+  grid-column: 2 2;
+}
+
+#image-3
+{
+  grid-column: 3 3;
+}
+
+img
+{
+  width: 50%;
+  height: auto;
+}
+
+h1, h3, figure
+{
+  text-align: center;
+  color: rgba(155, 140, 100, 255);
+}
+
+figcaption
+{
+  font-size: .75em;
+  font-style: italic;
+}
+
+.lower-container
+{
+  float: right;
+  margin-bottom: 20px;
+}
