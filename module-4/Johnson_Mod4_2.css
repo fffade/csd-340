@@ -12,21 +12,6 @@
   border: 1px solid red;
 }
 
-#image-1
-{
-    grid-column: 1 1;
-}
-
-#image-2
-{
-  grid-column: 2 2;
-}
-
-#image-3
-{
-  grid-column: 3 3;
-}
-
 img
 {
   width: 50%;
