@@ -1,0 +1,87 @@
+<!--
+  Omar Johnson
+  Module 9.3 Assignment
+  2/6/24
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CSD 340 Web Development with HTML and CSS</title>
+
+    <!-- Embedded javascript -->
+    <script type="text/javascript">
+
+      var firstValue = "buzzing",
+          secondValue = "wings",
+          thirdValue = "shake",
+          fourthValue = "antenna";
+
+    </script>
+
+</head>
+<body style="width:50%;">
+
+  <h1>Assignment 9.3: Javascript - Part 1</h1>
+
+  <p>Bee Movie</p>
+
+  <p>
+    NARRATOR:
+    (Black screen with text; The sound of <span id="buzzing">________</span> bees can be heard)
+    According to all known laws
+    of aviation,
+     :
+    there is no way a bee
+    should be able to fly.
+     :
+    Its <span id="wings">_____</span> are too small to get
+    its fat little body off the ground.
+     :
+    The bee, of course, flies anyway
+     :
+    because bees don't care
+    what humans think is impossible.
+  </p>
+
+  <p>
+    BARRY BENSON:
+    (Barry is picking out a shirt)
+    Yellow, black. Yellow, black.
+    Yellow, black. Yellow, black.
+     :
+    Ooh, black and yellow!
+    Let's <span id="shake">_____</span> it up a little.
+  </p>
+
+  <p>
+    JANET BENSON:
+    Barry! Breakfast is ready!
+    BARRY:
+    Coming!
+     :
+    Hang on a second.
+    (Barry uses his <span id="antenna">_______</span> like a phone)
+     :
+    Hello?<br>
+    ADAM FLAYMAN:
+
+    (Through phone)
+    - Barry?<br>
+    BARRY:
+    - Adam?<br>
+    ADAM:
+    - Can you believe this is happening?<br>
+    BARRY:
+    - I can't. I'll pick you up.
+    (Barry flies down the stairs)
+  </p>
+
+  <p>
+    <button type="button" onclick="document.getElementById('buzzing').innerHTML = firstValue;">buzzing</button><br>
+    <button type="button" onclick="document.getElementById('wings').innerHTML = secondValue;">wings</button><br>
+    <button type="button" onclick="document.getElementById('shake').innerHTML = thirdValue;">shake</button><br>
+    <button type="button" onclick="document.getElementById('antenna').innerHTML = fourthValue;">antenna</button>
+  </p>
+
+</body>
+</html>
