@@ -1,0 +1,39 @@
+<!--
+  Omar Johnson
+  Module 10.3 Assignment
+  2/12/24
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CSD 340 Web Development with HTML and CSS</title>
+</head>
+<body style="width:50%;">
+
+  <h1>Assignment 10.3: Javascript - Part 2</h1>
+
+  <br>
+
+  <h2>Operation: Image Display Change</h2>
+  <p>Click the image for something cool!</p>
+
+  <img width="480" height="480" alt="Mo Bamba" src="./obama_1.png" onmouseover="this.src = './obama_2.png';" onmouseout="this.src = './obama_1.png';" onclick="alterHelloWorld();">
+
+  <p><span id="hello-world" style="visibility: hidden;">Hello World!</span></p>
+
+  <!-- Embedded javascript -->
+  <script type="text/javascript">
+    function alterHelloWorld()
+    {
+      let helloWorld = document.getElementById("hello-world");
+
+      helloWorld.style.visibility = "visible";
+
+      let rgb = `rgb(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255}`;
+
+      helloWorld.style.color = rgb;
+    }
+  </script>
+
+</body>
+</html>
