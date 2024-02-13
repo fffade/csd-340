@@ -1,0 +1,83 @@
+<!--
+  Omar Johnson
+  Module 11.2 Assignment
+  2/13/24
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CSD 340 Web Development with HTML and CSS</title>
+
+    <link rel="stylesheet" href="./Johnson_Mod11_2.css">
+</head>
+<body>
+
+  <h1>Assignment 11.2: Javascript - Part 3</h1>
+
+  <p class="intro">
+    Welcome to the To Do List program. Type in an item into the text field and hit Add.
+    Press the display button to view all the items in the list.
+    Press Delete to choose an item to remove from the list.
+  </p>
+
+  <br>
+
+  <input id="input" type="text" placeholder="Enter an item..." maxlength="32"></input>
+
+  <button id="add" type="button">Add</button>
+  <button id="delete" type="button">Delete</button>
+  <button id="display" type="button">Display</button>
+
+  <hr>
+
+  <p id="entries"></p>
+
+
+  <!-- Embedded javascript -->
+  <script type="text/javascript">
+
+    var inputField = document.getElementById("input");
+
+    var items = [];
+
+    // Add functionality to add an item to the list
+    document.getElementById("add").onclick = () => {
+      if(inputField.value.length <= 0)
+        return;
+
+      alert(`Added '${inputField.value}' as item ${items.length}`);
+
+      items.push(inputField.value);
+      inputField.value = '';
+    };
+
+    // Add functionality to delete the last entry
+    document.getElementById("delete").onclick = () => {
+      if(items.length <= 0)
+        return;
+
+      let index = prompt("Choose an item index to delete:");
+
+      if(index < 0 || index >= items.length)
+        return alert("Index out of bounds");
+
+      items.splice(index, 1);
+    };
+
+    // Add functionality to display all entries
+    document.getElementById("display").onclick = () => {
+
+      let entries = document.getElementById("entries");
+
+      entries.innerHTML = "";
+
+      for(let i = 0; i < items.length; i++) {
+        entries.innerHTML += `Item ${i} = ${items[i]}<br>`;
+      }
+
+    };
+
+  </script>
+
+</body>
+</html>

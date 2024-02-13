@@ -1,0 +1,37 @@
+
+html, body
+{
+  background-color: #f0f0fa;
+  padding: 1em;
+}
+
+h1
+{
+  font-family: Helvetica, sans-serif;
+}
+
+p, input, button
+{
+  font-family: "Trebuchet MS", sans-serif;
+  color: #303030;
+}
+
+p.intro
+{
+  margin: 2em 0.5em;
+}
+
+input, button
+{
+  padding: 8px;
+  font-size: 0.8em;
+  letter-spacing: 1px;
+  margin-right: 5px;
+}
+
+hr
+{
+  height: 1px;
+  background-color: #a0a0ff;
+  margin: 2em 0;
+}
