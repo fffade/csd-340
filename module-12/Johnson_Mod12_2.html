@@ -1,0 +1,91 @@
+<!--
+  Omar Johnson
+  Module 12.2 Assignment
+  2/14/24
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="./Johnson_Mod12_2.css">
+
+  <title>CSD 340 Development with HTML and CSS</title>
+</head>
+<body>
+
+  <div id="container">
+
+    <h1>Assignment 12.2: Javascript - Part 4</h1>
+
+    <br>
+
+    <div id="favorite-books" class="inner-container">
+
+      <h3>Top 10 Favorite Books</h3>
+
+      <div id="controls">
+        <button type="button" onclick="displayAscending();">Top to Bottom</button>
+        <button type="button" onclick="displayDescending();">Bottom to Top</button>
+      </div>
+
+      <hr>
+
+      <ol id="books">
+      </ol>
+
+    </div>
+
+    <div id="things-learnt" class="inner-container">
+
+      <h3>5 Things I've Learned Since the Course Started</h3>
+
+      <ul>
+        <li>How to validate HTML code and fix warnings and errors</li>
+        <li>How to use the lang property of the html tag</li>
+        <li>How to deploy a static web page to my GitHub repository</li>
+        <li>How to add a horizontal rule to my web page</li>
+        <li>What the rel property of a link element is for</li>
+      </ul>
+
+    </div>
+
+    <div class="lower-container">
+
+      <p><a href="../">Back to Landing</a></p>
+
+    </div>
+
+
+    <!-- Embedded javascript -->
+    <script type="text/javascript">
+
+      var titles = ["The Invention of Hugo Cabret", "The Railway Children", "The Hunger Games", "The Book Thief", "A Series of Unfortunate of Events",
+                    "To Kill a Mockingbird", "Pride of Prejudice", "The Knife of Never Letting Go", "The Maze Runner", "Boy Overboard"];
+
+      var booksList = document.getElementById("books");
+
+      /* Displays the books in ascending order */
+      function displayAscending()
+      {
+        booksList.innerHTML = '';
+
+        for(let i = 0; i < titles.length; i++) {
+          booksList.innerHTML += `<li>${titles[i]}</li>`;
+        }
+      }
+
+      /* Clears and displays in descending order */
+      function displayDescending()
+      {
+        booksList.innerHTML = '';
+
+        for(let i = titles.length - 1; i >= 0; i--) {
+          booksList.innerHTML += `<li>${titles[i]}</li>`;
+        }
+      }
+
+    </script>
+
+  </div>
+
+</body>
+</html>
